@@ -9,3 +9,9 @@ aiBtn.addEventListener("click", () => {
     }
 });
 
+document.getElementById("contactForm").addEventListener("click", () => {
+  window.location.assign("form/form.html");
+});
+
+
+

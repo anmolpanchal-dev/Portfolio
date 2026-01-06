@@ -1,0 +1,77 @@
+body {
+  background: #f6f7fb;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.contact-box textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-box button {
+  width: 100%;
+  padding: 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.contact-box button:hover {
+  background: #4f46e5;
+}
+
+#previouspage {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#previouspage:hover {
+  background: #d1d5db;
+}
+
+/* Smooth fade effect for page exit */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+body {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
