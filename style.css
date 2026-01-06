@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+/* NAV */
+#nav {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px 24px;
+  background: #ffffff;
+}
+
+/* HERO */
+#heroSection {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* LEFT PANEL */
+#leftSection {
+  position: sticky;
+  height: fit-content;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+#leftSection1 {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#pic img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+#profileText p:first-child {
+  background: #dcfce7;
+  color: #166534;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+#profileText p:nth-child(2) {
+  font-weight: 700;
+}
+
+#profileText p:nth-child(3) {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* LEFT MENU */
+#leftSection2 p {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0px;
+  color: #6b7280;
+  padding: 4px;
+}
+#leftSection2 p img {
+  height: 14px;
+  width: 14px;
+  text-align: center;
+}
+#leftSection2 span img {
+  width: 30px;
+  height: 66px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#leftSection2 p:hover {
+  background: #f1f5f9;
+  /* color: white; */
+  font-size: 12px;
+}
+#otherOptions p {
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 3px;
+  margin-left: 6px;
+}
+#otherOptions p img {
+  height: 10px;
+  width: 12px;
+  padding: 0px;
+}
+#portfolioTag {
+  background-color: #111827;
+  color: white;
+
+}
+#aiToolsBtn {
+  cursor: pointer;
+}
+#aiDropdown {
+  display: none;
+  margin-left: 35px;
+  margin-top: 8px;
+}
+
+#aiDropdown li {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+#aiDropdown p:hover {
+  color: #6366f1;
+}
+
+/* RIGHT PANEL */
+#rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TOP LINKS */
+#rightSection1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+#rightSection1 a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+#rightSection1 a:last-child {
+  background: #111827;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* HERO TEXT */
+#rightSection2 {
+  background: linear-gradient(135deg, #c9d5ff, #ffffff);
+  border-radius: 20px;
+  padding: 40px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+#diffColorText{
+  color: #6366f1;
+}
+h6{
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+#rightSection2 span {
+  color: #6366f1;
+}
+
+/* CARDS */
+#rightSectionCards {
+  display: flex;
+  gap: 16px;
+}
+
+#rightSectionCards span {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+#rightSectionCards p {
+  font-size: 13px;
+  color: #6b7280;
+}
+#card1 {
+  color: #6366f1;
+  font-weight: 100;
+}
+
+#rightSectionCards h3 {
+  margin: 6px 0;
+}
+
+/* BOTTOM CARDS */
+#rightSectionCards2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ek row me 2 cards */
+  gap: 16px;
+}
+
+#rightSectionCards2 span {
+  background: #ffffff;
+  border-radius: 16px;
+  height: 220px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+#logo {
+  display: flex;
+  margin-top: 10px;
+}
+#logo img {
+  height: 20px;
+  margin-right: 5px;
+}
+#footer {
+  background-color: #111827;
+  color: #e5e7eb;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-content h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.footer-content p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.footer-links {
+  margin: 18px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.footer-links a:hover {
+  color: #6366f1;
+}
+
+.footer-social {
+  margin: 16px 0;
+}
+
+.footer-social img {
+  width: 26px;
+  margin: 0 8px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+}
+
+.footer-line {
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: #1f2937;
+  margin: 20px auto;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+#devToolLogo {
+  margin-top: 10px;
+}
+#devToolLogo img {
+  height: 20px;
+  margin-right: 5px;
+}
