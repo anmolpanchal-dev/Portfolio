@@ -2,6 +2,8 @@
       emailjs.init("kClAcwdc9zDtf8Dno");
     })();
 
+    let msgContainer = document.querySelector("#submitMsg");
+
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -13,11 +15,13 @@
         )
         .then(
           function () {
-            alert("✅ Message sent successfully!");
+            msgContainer.innerHTML = `<p id='successMsg'>Successfully Sent.</p>`
+            setTimeout(() => msgContainer.innerHTML = "", 2000);
             document.getElementById("contactForm").reset();
           },
           function (error) {
-            alert("❌ Failed to send message. Please try again.");
+            msgContainer.innerHTML = `<p id='failedMsg'>Failed to Sent. </p>`
+            setTimeout(() => msgContainer.innerHTML = "", 2000);
             console.error(error);
           }
         );

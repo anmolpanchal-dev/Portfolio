@@ -217,7 +217,7 @@ h6{
 #rightSectionCards2 span {
   background: #ffffff;
   border-radius: 16px;
-  height: 220px;
+  height: 400px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 #logo {
@@ -301,4 +301,17 @@ h6{
 #devToolLogo img {
   height: 20px;
   margin-right: 5px;
+}
+#techStack{
+  display: flex;
+  justify-content: end;
+  border: 2px solid black;
+  height: 30px;
+}
+.tech{
+  border: 2px solid black;
+  width: 60px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 15px;
 }
