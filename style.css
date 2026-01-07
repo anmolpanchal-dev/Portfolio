@@ -28,7 +28,6 @@ body {
 /* LEFT PANEL */
 #leftSection {
   position: sticky;
-  height: fit-content;
   width: 260px;
   background: #ffffff;
   border-radius: 16px;
@@ -36,6 +35,9 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
+#projectStack{
+  cursor: pointer;
+}
 #leftSection1 {
   display: flex;
   gap: 12px;
@@ -387,4 +389,83 @@ h6{
   text-decoration: none;
   border-radius: 10px;
   font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+  /* HERO LAYOUT */
+  #heroSection {
+    flex-direction: column;
+  }
+
+  /* LEFT PANEL */
+  #leftSection {
+    width: 100%;
+    position: static;
+  }
+
+  /* HERO TEXT */
+  #rightSection2 {
+    font-size: 28px;
+    padding: 24px;
+  }
+
+  /* TOP LINKS */
+  #rightSection1 {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* STAT CARDS */
+  #rightSectionCards {
+    flex-direction: column;
+  }
+
+  /* PROJECT CARDS */
+  #rightSectionCards2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECT IMAGE */
+  .image-container img {
+    height: 180px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  #rightSection2 {
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-desc {
+    font-size: 13px;
+  }
+
+  .project-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  #leftSection {
+    width: 220px;
+  }
+
+  #rightSectionCards2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }

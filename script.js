@@ -13,5 +13,7 @@ document.getElementById("contactForm").addEventListener("click", () => {
   window.location.assign("form/form.html");
 });
 
-
+document.getElementById("projectStack").addEventListener("click", () => {
+  window.location.assign("projectstack/project.html");
+});
 
