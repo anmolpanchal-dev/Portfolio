@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="images/profilefevicon.png" />
   </head>
   <body>
     <div id="nav">Portfolio</div>
@@ -56,17 +57,19 @@
           <div id="aiDropdown">
             <li>ChatGPT</li>
             <li>GitHub Copilot</li>
-            <li>Google Gemini</li>
-            <li>Midjourney</li>
+            <li>Google AI Studio</li>
+            <li>Netlify</li>
+            <li>Ms Office</li>
           </div>
         </span>
       </div>
 
       <div id="rightSection">
         <div id="rightSection1">
+          <a href="" class="aboutBtn">About Me</a>
           <a id="projectStack" href="projectstack/projectStack.html">project</a>
-          <a href="">About Me</a>
-          <a href="">View Resume</a>
+          <a href="https://github.com/anmolpanchal-dev">Github</a>
+          <a href="" class="resumeBtn">View Resume</a>
         </div>
         <div id="rightSection2">
           Building innovative software solutions with
@@ -105,11 +108,7 @@
         <div id="rightSectionCards2">
           <div class="project-card">
             <div class="image-container">
-              <img
-                src="images/StonePaperScissor.png"
-                alt="Project Image"
-              />
-
+              <img src="images/StonePaperScissor.png" alt="Project Image" />
             </div>
 
             <h3 class="project-title">Stone Paper Scissor Game</h3>
@@ -120,33 +119,34 @@
               <div class="tech">JavaScript</div>
             </div>
 
-            <a href="https://stone-paper-scissorgames.netlify.app/" class="project-btn">View Project</a>
+            <a
+              href="https://stone-paper-scissorgames.netlify.app/"
+              class="project-btn"
+              >View Project</a
+            >
           </div>
           <div class="project-card">
             <div class="image-container">
-              <img
-              src="images/Calc.png"
-              alt="Project Image"
-              />
-              
+              <img src="images/Calc.png" alt="Project Image" />
             </div>
-            
+
             <h3 class="project-title">Modern Calculator</h3>
-            
+
             <div class="tech-stack">
               <div class="tech">HTML</div>
               <div class="tech">CSS</div>
               <div class="tech">JavaScript</div>
             </div>
-            
-            <a href="https://one-modern-calculator.netlify.app/" class="project-btn">View Project</a>
+
+            <a
+              href="https://one-modern-calculator.netlify.app/"
+              class="project-btn"
+              >View Project</a
+            >
           </div>
           <div class="project-card">
             <div class="image-container">
-              <img
-                src="images/SignUpPage.png"
-                alt="Project Image"
-              />
+              <img src="images/SignUpPage.png" alt="Project Image" />
             </div>
 
             <h3 class="project-title">SignUp Page</h3>
@@ -157,14 +157,13 @@
               <div class="tech">JavaScript</div>
             </div>
 
-            <a href="https://sign-up-page-js.netlify.app/" class="project-btn">View Project</a>
+            <a href="https://sign-up-page-js.netlify.app/" class="project-btn"
+              >View Project</a
+            >
           </div>
           <div class="project-card">
             <div class="image-container">
-              <img
-                src="images/tictactoe.png"
-                alt="Project Image"
-              />
+              <img src="images/tictactoe.png" alt="Project Image" />
             </div>
 
             <h3 class="project-title">Tic Tac Toe</h3>
@@ -175,23 +174,30 @@
               <div class="tech">JavaScript</div>
             </div>
 
-            <a href="https://tic-tac-toe-bjjozrrgy-anmolpanchal05s-projects.vercel.app/" class="project-btn">View Project</a>
+            <a
+              href="https://tic-tac-toe-bjjozrrgy-anmolpanchal05s-projects.vercel.app/"
+              class="project-btn"
+              >View Project</a
+            >
           </div>
-          
         </div>
+        <h1>Skills</h1>
       </div>
     </div>
-
     <footer id="footer">
       <div class="footer-content">
         <h2>Anmol Panchal</h2>
         <p>B.Tech CSE Student • Aspiring Software Developer</p>
 
         <div class="footer-links">
-          <a href="#">Projects</a>
-          <a href="#">About</a>
-          <a href="#">Resume</a>
-          <button id="contactForm">Go to About Page</button>
+          <div>
+            <a href="projectstack/projectStack.html">Projects</a>
+            <a href="" class="aboutBtn">About Me</a>
+            <a href=""  class="resumeBtn">Resume</a>
+          </div>
+          <div>
+            <button id="contactForm">Conatct Me</button>
+          </div>
         </div>
 
         <div class="footer-social">
@@ -204,6 +210,41 @@
         <p class="footer-copy">© 2026 Anmol Panchal. All rights reserved.</p>
       </div>
     </footer>
+
+    <div id="aboutPopup">
+      <div class="popup-box">
+        <span class="close-btn">&times;</span>
+
+        <h2>About Me</h2>
+        <p>
+          I’m Anmol Panchal,<br> a frontend developer who enjoys creating modern, smooth, and responsive web interfaces.  
+          I focus on writing clean code and designing user-friendly layouts.
+          Currently exploring advanced JavaScript concepts and building real-world projects to sharpen my skills.
+        </p>
+      </div>
+  </div>
+
+
+<div class="resume-popup" id="resumePopup">
+  <div class="resume-box">
+    <span class="close-btn" id="closeResume">&times;</span>
+
+    <h2>My Resume</h2>
+
+    <div class="resume-content">
+      <p><strong>Name:</strong> Anmol Panchal</p>
+      <p><strong>Profile:</strong> Frontend Developer (Fresher)</p>
+      <p><strong>Skills:</strong> HTML, CSS, JavaScript, Python, C++</p>
+      <p><strong>Projects:</strong> To-Do App, Calculator, Stone-Paper-Scissor</p>
+      <p><strong>Education:</strong> Diploma in Computer Science</p>
+    </div>
+
+    <!-- Download Button -->
+    <a href="AnmolPanchalResumeNew01.pdf" download class="download-btn">
+      Download Resume
+    </a>
+  </div>
+</div>
 
     <script src="script.js"></script>
   </body>

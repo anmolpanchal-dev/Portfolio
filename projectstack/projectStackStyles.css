@@ -1,0 +1,64 @@
+body {
+  background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+  min-height: 100vh;
+  color: #1f2937;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position:relative;
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* PROJECT CARD */
+.project-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px rgba(0,0,0,0.15);
+} */
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* TECH BADGE */
+.tech-badge {
+  background: #eef2ff;
+  color: #4f46e5;
+  font-weight: 500;
+  margin-right: 6px;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+/* COUNTER */
+.counter {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+#previouspage {
+  align-self: c;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  transition: background 0.3s;
+}
+
+#previouspage:hover {
+  background: #d1d5db;
+}
