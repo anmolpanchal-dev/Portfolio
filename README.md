@@ -1,50 +1,79 @@
-# 🌐 Personal Portfolio Website
+# 🌐 Anmol Panchal Portfolio
 
-This is my **personal portfolio website**, currently under development 🚧  
-The goal of this project is to showcase my skills, learning journey, and future projects in a clean and professional way.
+**Welcome to my personal portfolio website!**  
+I’m a B.Tech CSE student and a Web Developer passionate about building modern, responsive, and user-friendly web experiences.
 
----
-
-## 👤 About Me
-
-Hi, I'm **Anmol Panchal** 👋  
-🎓 B.Tech Computer Science Student  
-💻 Learning Web Development & Programming  
-🚀 Aspiring Software Developer  
-
-This portfolio is a work-in-progress and will evolve as I learn new technologies and build more projects.
+🌍 **Live Demo:** https://anmolpanchal-dev.github.io/Portfolio  
+📄 **Resume:** [AnmolPanchalResumeNew01.pdf](./AnmolPanchalResumeNew01.pdf)
 
 ---
 
-## 🛠️ Tech Stack (So Far)
+## 🚀 About Me
 
-- **HTML5** – Structure
-- **CSS3** – Styling & layout
-- **Flexbox / Grid** – Layout design
-- **Basic UI/UX principles**
+Hi! I’m **Anmol Panchal** — a self-motivated developer focused on crafting clean and efficient web solutions. I enjoy learning new technologies and bringing ideas to life in code.
 
-More technologies will be added soon.
-
----
-
-## 🚧 Current Status
-
-🔨 **Under Construction**
-
-### What is completed:
-- Basic layout structure
-- Sidebar / profile section
-- Footer design
-- Clean dark-themed UI
-
-### What is coming next:
-- Projects section
-- Resume integration
-- Responsive design (mobile & tablet)
-- JavaScript functionality
-- Live project demos
+- 🎓 B.Tech in Computer Science & Engineering  
+- 💻 Web Development: HTML, CSS, JavaScript  
+- 📌 Currently working on improving responsiveness and adding dynamic features
 
 ---
 
-## 📂 Folder Structure
+## 🧠 Skills
+
+Here are the technologies and tools I work with:
+
+| Skill | Level |
+|-------|-------|
+| HTML | ⭐⭐⭐⭐ |
+| CSS | ⭐⭐⭐ |
+| JavaScript | ⭐⭐⭐ |
+| Git & GitHub | ⭐⭐⭐ |
+
+---
+
+## 📁 Project Highlights
+
+### 🛠️ Portfolio Website  
+**Description:** My personal portfolio website built with HTML, CSS & JavaScript.  
+**Features:**
+- Custom UI design
+- Sidebar navigation
+- Contact & About sections
+- Resume linked for quick download
+
+📂 **Repository**: https://github.com/anmolpanchal-dev/Portfolio
+
+🔗 **Live Site:** https://anmolpanchal-dev.github.io/Portfolio
+
+---
+
+## 🎯 What’s Next
+
+I am actively working on:
+- ⚡ Responsive design for all screen sizes
+- 📸 Project showcase section with images
+- 📨 Functional contact form
+- 🌙 Dark/Light theme toggle
+
+---
+
+## 📫 Contact Me
+
+Let’s connect!  
+📧 Email: anmol@example.com  
+🔗 LinkedIn: https://linkedin.com/in/your-profile  
+💼 GitHub: https://github.com/anmolpanchal-dev
+
+---
+
+## ⭐ Why this Portfolio?
+
+This portfolio shows:
+- My understanding of fundamental web development principles
+- Organization of a multi-section site
+- The ability to continuously improve and add new features
+
+---
+
+> **Tip:** Don’t forget to ⭐ star this repo if you find it useful!
 
