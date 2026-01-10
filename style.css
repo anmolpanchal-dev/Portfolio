@@ -46,13 +46,10 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
-
+/* ===== POPUP OVERLAY ===== */
 .resume-popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
@@ -60,14 +57,99 @@ body {
   z-index: 999;
 }
 
+/* ===== RESUME BOX ===== */
 .resume-box {
-  background: #fff;
-  padding: 30px;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 12px;
   position: relative;
+  background: #ffffff;
+  width: 95%;
+  max-width: 520px;
+  max-height: 85vh;
+  padding: 60px 30px 30px;   /* ⬅ top padding increased for buttons */
+  border-radius: 14px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
   animation: scaleIn 0.3s ease;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== SCROLLBAR ===== */
+.resume-box::-webkit-scrollbar {
+  width: 6px;
+}
+.resume-box::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.resume-box::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 10px;
+}
+
+/* ===== HEADER BUTTONS ===== */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #374151;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+.download-btn {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* ===== HEADINGS ===== */
+.resume-box h2:first-of-type {
+  margin-top: 0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .resume-box {
+    padding: 55px 20px 20px;
+    max-height: 90vh;
+  }
+
+  .download-btn {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .close-btn {
+    font-size: 24px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .skills-list{
