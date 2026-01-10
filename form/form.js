@@ -1,33 +1,32 @@
 (function () {
-      emailjs.init("kClAcwdc9zDtf8Dno");
-    })();
+  emailjs.init("Twc8LwyZe8gchY7id"); 
+})();
 
-    let msgContainer = document.querySelector("#submitMsg");
+const msgContainer = document.getElementById("submitMsg");
 
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  console.log("Form submitted");
 
-      emailjs
-        .sendForm(
-          "service_iyq09kr", 
-          "template_ic2gwfd", 
-          this
-        )
-        .then(
-          function () {
-            msgContainer.innerHTML = `<p id='successMsg'>Successfully Sent.</p>`
-            setTimeout(() => msgContainer.innerHTML = "", 2000);
-            document.getElementById("contactForm").reset();
-          },
-          function (error) {
-            msgContainer.innerHTML = `<p id='failedMsg'>Failed to Sent. </p>`
-            setTimeout(() => msgContainer.innerHTML = "", 2000);
-            console.error(error);
-          }
-        );
-    });
+  emailjs.sendForm(
+    "service_43l84zb",      
+    "template_rrgl3v1",      
+    this                     
+  ).then(
+    () => {
+      msgContainer.innerHTML = "<p id='successMsg'>Successfully Sent.</p>";
+      setTimeout(() => (msgContainer.innerHTML = ""), 2000);
+      this.reset();
+    },
+    (error) => {
+      msgContainer.innerHTML = "<p id='failedMsg'>Failed to Send.</p>";
+      setTimeout(() => (msgContainer.innerHTML = ""), 2000);
+      console.error("EmailJS Error:", error);
+    }
+  );
+});
 
-
-document.getElementById("previouspage").addEventListener("click", function() {
-    window.location.href = "../index.html";
+document.getElementById("previouspage").addEventListener("click", () => {
+  window.history.back();
 });

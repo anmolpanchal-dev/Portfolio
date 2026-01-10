@@ -5,35 +5,34 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  min-height: 100vh;
+  margin: 0;
 }
 
-#submitMsg{
-  height: 40px;
-  margin-bottom: 30px;
+#submitMsg {
+  margin-bottom: 20px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#successMsg{
+#successMsg, #failedMsg {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  width:300px;
   font-weight: 600;
   height: 40px;
+  width: 300px;
   border-radius: 20px;
+}
+
+#successMsg {
   background-color: rgb(135, 228, 135);
 }
 
-#failedMsg{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 600;
-  height: 40px;
-  width:300px;
-  border-radius: 20px;
+#failedMsg {
   background-color: rgb(243, 71, 36);
 }
 
@@ -76,6 +75,7 @@ body {
   border-radius: 10px;
   font-size: 15px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .contact-box button:hover {
@@ -83,7 +83,7 @@ body {
 }
 
 #previouspage {
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 10px 20px;
   background: #e5e7eb;
   border: none;
@@ -95,7 +95,6 @@ body {
   background: #d1d5db;
 }
 
-/* Smooth fade effect for page exit */
 body.fade-out {
   opacity: 0;
   transition: opacity 0.5s;

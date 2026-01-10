@@ -5,16 +5,13 @@
   <title>Contact Me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="form.css" />
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="icon" type="image/png" href="../images/profilefevicon.png"/>
 </head>
 <body>
-  <div id="submitMsg">
-    <!-- <p id="successMsg">Hello</p> -->
-  </div>
+  <div id="submitMsg"></div>
   <div class="contact-box">
     <h2>Contact Me</h2>
-
     <form id="contactForm">
       <input type="text" name="from_name" placeholder="Your Name" required />
       <input type="email" name="user_email" placeholder="Your Email" required />
@@ -23,7 +20,9 @@
       <button type="submit">Send Message</button>
     </form>
   </div>
- <button id="previouspage">Go Previous</button>
+
+  <button id="previouspage">Go Previous</button>
+
   <script src="form.js"></script>
 </body>
 </html>
