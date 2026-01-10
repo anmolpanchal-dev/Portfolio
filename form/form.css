@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: #f6f7fb;
+  background: linear-gradient(135deg, #f6f7fb, #eef2ff);
   font-family: "Segoe UI", sans-serif;
   display: flex;
   flex-direction: column;
@@ -7,99 +11,142 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  padding: 16px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
 }
 
 #submitMsg {
-  margin-bottom: 20px;
-  min-height: 50px;
+  margin-bottom: 16px;
+  min-height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#successMsg, #failedMsg {
+#successMsg,
+#failedMsg {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffffff;
   font-weight: 600;
   height: 40px;
-  width: 300px;
-  border-radius: 20px;
+  width: 200px;
+  max-width: 300px;
+  border-radius: 999px;
+  font-size: 14px;
+  animation: fadeSlide 0.4s ease;
 }
 
 #successMsg {
-  background-color: rgb(135, 228, 135);
+  background: linear-gradient(135deg, #6ee7b7, #22c55e);
 }
 
 #failedMsg {
-  background-color: rgb(243, 71, 36);
+  background: linear-gradient(135deg, #f87171, #ef4444);
 }
 
 .contact-box {
   background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
+  padding: 24px;
+  border-radius: 18px;
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
 }
 
 .contact-box h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #111827;
+  font-size: 1.5rem;
 }
 
 .contact-box input,
 .contact-box textarea {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   margin-bottom: 14px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #d1d5db;
   font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
 .contact-box textarea {
   resize: none;
-  height: 120px;
+  height: 110px;
 }
 
 .contact-box button {
   width: 100%;
   padding: 12px;
-  background: #6366f1;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 15px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-box button:hover {
-  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
 }
 
 #previouspage {
-  margin-top: 15px;
-  padding: 10px 20px;
+  margin-top: 14px;
+  padding: 10px 18px;
   background: #e5e7eb;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
-}
-#previouspage:hover {
-  background: #d1d5db;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-body.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s;
+#previouspage:hover {
+  background: #d1d5db;
+  transform: translateY(-1px);
 }
-body {
-  opacity: 1;
-  transition: opacity 0.5s;
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .contact-box h2 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-box {
+    max-width: 460px;
+  }
 }
