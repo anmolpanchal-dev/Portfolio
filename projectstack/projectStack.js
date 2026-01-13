@@ -33,6 +33,12 @@ const projects = [
     image: "../images/Calc.png",
     stack: ["HTML","CSS","JavaScript"],
     link: "https://one-modern-calculator.netlify.app/"
+  },{
+    title: "Weather App",
+    description: "Weather app using API.",
+    image: "../images/weather.png",
+    stack: ["HTML","CSS","JavaScript"],
+    link: "https://anmolpanchal-dev.github.io/Weather-App/"
   },
 ];
 
