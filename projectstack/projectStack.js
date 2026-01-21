@@ -4,7 +4,7 @@ const projects = [
     description: "A Simple todo page that enable to save your todos with date",
     image: "../images/todo1.png",
     stack: ["JavaScript", "HTML", "CSS"],
-    link: "#"
+    link: "https://anmolpanchal-dev.github.io/Todo-App/"
   },
   {
     title: "Stone Paper Scissor Game",
@@ -40,6 +40,14 @@ const projects = [
     stack: ["HTML","CSS","JavaScript"],
     link: "https://anmolpanchal-dev.github.io/Weather-App/"
   },
+  {
+    title: "Character Counter",
+    description: "A simple character counter that counts the number of characters in a given text input.",
+    image: "../images/characterCounter.png",
+    stack: ["HTML","CSS","JavaScript"],
+    link: "https://anmolpanchal-dev.github.io/CharacterCounter/"
+  },
+
 ];
 
 const container = document.getElementById("projectContainer");
