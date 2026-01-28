@@ -1,5 +1,11 @@
 const projects = [
   {
+    title: "Expense Tracker",
+    description: "A Simple Expense Tracker App",
+    image: "../images/Screenshot 2026-01-29 001605.jpg",
+    stack: ["JavaScript", "HTML", "CSS"],
+    link: "https://anmolpanchal-dev.github.io/ExpenseTracker/"
+  },{
     title: "Todo Website",
     description: "A Simple todo page that enable to save your todos with date",
     image: "../images/todo1.png",
@@ -46,6 +52,13 @@ const projects = [
     image: "../images/characterCounter.png",
     stack: ["HTML","CSS","JavaScript"],
     link: "https://anmolpanchal-dev.github.io/CharacterCounter/"
+  },
+  {
+    title: "Personal Task Tracker",
+    description: "A simple task tracker to manage your daily tasks effectively.",
+    image: "../images/taskTracker.png",
+    stack: ["HTML","CSS","JavaScript"],
+    link: "https://anmolpanchal-dev.github.io/PersonalTaskTracker/"
   },
 
 ];
