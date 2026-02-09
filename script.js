@@ -1,64 +1,86 @@
 const aiBtn = document.getElementById("aiToolsBtn");
 const aiDropdown = document.getElementById("aiDropdown");
 
-aiBtn.addEventListener("click", () => {
-  aiDropdown.style.display =
-    aiDropdown.style.display === "block" ? "none" : "block";
-});
+if (aiBtn && aiDropdown) {
+  aiBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    aiDropdown.style.display =
+      aiDropdown.style.display === "block" ? "none" : "block";
+  });
 
-document.getElementById("contactForm").addEventListener("click", () => {
-  window.location.href = "form/form.html";
-});
+  document.addEventListener("click", (e) => {
+    if (!aiDropdown.contains(e.target) && e.target !== aiBtn) {
+      aiDropdown.style.display = "none";
+    }
+  });
+}
 
-document.getElementById("projectStack").addEventListener("click", () => {
-  window.location.href = "projectstack/project.html";
-});
+const contactBtn = document.getElementById("contactForm");
+if (contactBtn) {
+  contactBtn.addEventListener("click", () => {
+    window.location.href = "form/form.html";
+  });
+}
 
 const aboutBtns = document.querySelectorAll(".aboutBtn");
 const aboutPopup = document.getElementById("aboutPopup");
-const aboutClose = aboutPopup.querySelector(".close-btn");
+const aboutClose = aboutPopup ? aboutPopup.querySelector(".close-btn") : null;
 
-aboutBtns.forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    closeAllPopups();
-    aboutPopup.style.display = "flex";
+if (aboutBtns.length && aboutPopup && aboutClose) {
+  aboutBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeAllPopups();
+      aboutPopup.style.display = "flex";
+    });
   });
-});
 
-aboutClose.addEventListener("click", () => {
-  aboutPopup.style.display = "none";
-});
-
-aboutPopup.addEventListener("click", (e) => {
-  if (e.target === aboutPopup) {
+  aboutClose.addEventListener("click", () => {
     aboutPopup.style.display = "none";
-  }
-});
+  });
+
+  aboutPopup.addEventListener("click", (e) => {
+    if (e.target === aboutPopup) {
+      aboutPopup.style.display = "none";
+    }
+  });
+}
 
 const resumeBtns = document.querySelectorAll(".resumeBtn");
 const resumePopup = document.getElementById("resumePopup");
 const resumeClose = document.getElementById("closeResume");
 
-resumeBtns.forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    closeAllPopups();
-    resumePopup.style.display = "flex";
+if (resumeBtns.length && resumePopup && resumeClose) {
+  resumeBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeAllPopups();
+      resumePopup.style.display = "flex";
+    });
   });
-});
 
-resumeClose.addEventListener("click", () => {
-  resumePopup.style.display = "none";
-});
-
-resumePopup.addEventListener("click", (e) => {
-  if (e.target === resumePopup) {
+  resumeClose.addEventListener("click", () => {
     resumePopup.style.display = "none";
+  });
+
+  resumePopup.addEventListener("click", (e) => {
+    if (e.target === resumePopup) {
+      resumePopup.style.display = "none";
+    }
+  });
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeAllPopups();
   }
 });
 
 function closeAllPopups() {
-  aboutPopup.style.display = "none";
-  resumePopup.style.display = "none";
+  if (aboutPopup) {
+    aboutPopup.style.display = "none";
+  }
+  if (resumePopup) {
+    resumePopup.style.display = "none";
+  }
 }
