@@ -2,27 +2,240 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Me</title>
+  <title>Contact Me — Anmol Panchal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="form.css" />
+
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts: Fraunces + DM Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- EmailJS — UNCHANGED -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <link rel="icon" type="image/png" href="../images/profilefevicon.png"/>
+
+  <link rel="stylesheet" href="form.css" />
+  <link rel="icon" type="image/png" href="../images/profilefevicon.png" />
 </head>
+
 <body>
-  <div id="submitMsg"></div>
-  <div class="contact-box">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" name="from_name" placeholder="Your Name" required />
-      <input type="email" name="user_email" placeholder="Your Email" required />
-      <input type="text" name="subject" placeholder="Subject" required />
-      <textarea name="message" placeholder="Write your message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
 
-  <button id="previouspage">Go Previous</button>
+  <!-- ════════════════════════════════════════════════
+       PAGE WRAPPER
+  ════════════════════════════════════════════════ -->
+  <div class="page-wrapper">
 
+    <!-- Decorative background blobs -->
+    <div class="bg-blob bg-blob--1" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob--2" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob--3" aria-hidden="true"></div>
+
+    <div class="container position-relative">
+
+      <!-- ── BACK BUTTON ── id="previouspage" preserved for form.js -->
+      <!-- [DESIGN] Moved to top-left corner as floating back nav -->
+      <div class="top-nav">
+        <a href="../index.html" class="brand-link">
+          <button id="previouspage" class="back-btn">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back</span>
+        </button>
+          <span class="brand-dot"></span>
+          <span>Anmol Panchal</span>
+        </a>
+      </div>
+
+      <!-- ── MAIN GRID ── -->
+      <div class="row align-items-center justify-content-center gx-5 gy-5 main-row">
+
+        <!-- ════════════════════════════════
+             LEFT SIDE: Info panel
+             [DESIGN] Contact info sidebar
+        ════════════════════════════════ -->
+        <div class="col-lg-5 d-none d-lg-flex flex-column info-col">
+
+          <div class="info-tag mb-3">
+            <i class="bi bi-send-fill me-1"></i> Get In Touch
+          </div>
+
+          <h1 class="info-title">
+            Let's <em>work</em><br>together.
+          </h1>
+
+          <p class="info-sub">
+            Have a project in mind, want to collaborate, or just want to say hello?
+            Fill out the form and I'll get back to you as soon as possible.
+          </p>
+
+          <!-- Contact details -->
+          <div class="info-details">
+            <div class="info-detail-item">
+              <span class="detail-icon"><i class="bi bi-envelope-fill"></i></span>
+              <div>
+                <span class="detail-label">Email</span>
+                <span class="detail-value">panchalji9705@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-detail-item">
+              <span class="detail-icon"><i class="bi bi-geo-alt-fill"></i></span>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Khuskhera, Alwar, Rajasthan</span>
+              </div>
+            </div>
+            <div class="info-detail-item">
+              <span class="detail-icon"><i class="bi bi-mortarboard-fill"></i></span>
+              <div>
+                <span class="detail-label">Status</span>
+                <span class="detail-value">Open to Opportunities</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="info-socials mt-4">
+            <a href="https://github.com/anmolpanchal-dev" target="_blank" class="info-social-btn" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anmolpanchal-dev/" target="_blank" class="info-social-btn" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Decorative card pattern -->
+          <div class="info-deco-card" aria-hidden="true">
+            <i class="bi bi-chat-quote-fill"></i>
+            <span>"Building with clean code."</span>
+          </div>
+
+        </div><!-- /info-col -->
+
+
+        <!-- ════════════════════════════════
+             RIGHT SIDE: Contact Form
+             All form fields/IDs unchanged
+        ════════════════════════════════ -->
+        <div class="col-lg-7 col-xl-6">
+
+          <!-- [DESIGN] Form wrapped in elevated card -->
+          <div class="form-card">
+
+            <!-- Card header -->
+            <div class="form-card-header">
+              <div class="form-card-icon">
+                <i class="bi bi-envelope-paper-fill"></i>
+              </div>
+              <div>
+                <h2 class="form-card-title">Contact Me</h2>
+                <p class="form-card-sub">I usually reply within 24 hours.</p>
+              </div>
+            </div>
+
+            <!-- ── SUCCESS / ERROR MESSAGE ──
+                 id="submitMsg" preserved for form.js
+            ── -->
+            <div id="submitMsg"></div>
+
+            <!-- ════════════════════════════
+                 CONTACT FORM
+                 id="contactForm" preserved
+                 All name attributes unchanged:
+                   name="from_name"
+                   name="user_email"
+                   name="subject"
+                   name="message"
+            ════════════════════════════ -->
+            <form id="contactForm" novalidate>
+
+              <!-- Name field -->
+              <div class="field-group">
+                <label class="field-label" for="field_name">
+                  <i class="bi bi-person-fill"></i> Your Name
+                </label>
+                <input
+                  id="field_name"
+                  type="text"
+                  name="from_name"
+                  class="field-input"
+                  placeholder="e.g. Anmol Panchal"
+                  required
+                />
+                <span class="field-focus-line"></span>
+              </div>
+
+              <!-- Email field -->
+              <div class="field-group">
+                <label class="field-label" for="field_email">
+                  <i class="bi bi-envelope-fill"></i> Your Email
+                </label>
+                <input
+                  id="field_email"
+                  type="email"
+                  name="user_email"
+                  class="field-input"
+                  placeholder="e.g. you@example.com"
+                  required
+                />
+                <span class="field-focus-line"></span>
+              </div>
+
+              <!-- Subject field -->
+              <div class="field-group">
+                <label class="field-label" for="field_subject">
+                  <i class="bi bi-tag-fill"></i> Subject
+                </label>
+                <input
+                  id="field_subject"
+                  type="text"
+                  name="subject"
+                  class="field-input"
+                  placeholder="e.g. Project Collaboration"
+                  required
+                />
+                <span class="field-focus-line"></span>
+              </div>
+
+              <!-- Message field -->
+              <div class="field-group">
+                <label class="field-label" for="field_message">
+                  <i class="bi bi-chat-left-text-fill"></i> Message
+                </label>
+                <textarea
+                  id="field_message"
+                  name="message"
+                  class="field-input field-textarea"
+                  placeholder="Write your message here…"
+                  required
+                ></textarea>
+                <span class="field-focus-line"></span>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="submit-btn">
+                <span class="submit-btn-text">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </span>
+                <span class="submit-btn-loader" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </span>
+              </button>
+
+            </form><!-- /#contactForm -->
+
+          </div><!-- /.form-card -->
+        </div><!-- /col form -->
+
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div><!-- /page-wrapper -->
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- form.js — completely unchanged -->
   <script src="form.js"></script>
+
 </body>
 </html>
