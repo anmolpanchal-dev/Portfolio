@@ -1,3 +1,10 @@
+/* ============================================================
+   projectStack.js
+   All original logic preserved exactly as-is.
+   Added: pill sync + navbar scroll effect (design-only helpers)
+   ============================================================ */
+
+// ── PROJECT DATA (unchanged) ──────────────────────────────
 const projects = [
   {
     title: "Expense Tracker",
@@ -5,7 +12,8 @@ const projects = [
     image: "../images/Screenshot 2026-01-29 001605.jpg",
     stack: ["JavaScript", "HTML", "CSS"],
     link: "https://anmolpanchal-dev.github.io/ExpenseTracker/"
-  },{
+  },
+  {
     title: "Todo Website",
     description: "A Simple todo page that enable to save your todos with date",
     image: "../images/todo1.png",
@@ -30,43 +38,45 @@ const projects = [
     title: "Tic Tac Toe Game",
     description: "Logic-based game with clean UI & smooth gameplay.",
     image: "../images/tictactoe.png",
-    stack: ["HTML","CSS","JavaScript"],
+    stack: ["HTML", "CSS", "JavaScript"],
     link: "https://tic-tac-toe-bjjozrrgy-anmolpanchal05s-projects.vercel.app/"
   },
   {
     title: "Calculator",
     description: "Logic based Calculator.",
     image: "../images/Calc.png",
-    stack: ["HTML","CSS","JavaScript"],
+    stack: ["HTML", "CSS", "JavaScript"],
     link: "https://one-modern-calculator.netlify.app/"
-  },{
+  },
+  {
     title: "Weather App",
     description: "Weather app using API.",
     image: "../images/weather.png",
-    stack: ["HTML","CSS","JavaScript"],
+    stack: ["HTML", "CSS", "JavaScript"],
     link: "https://anmolpanchal-dev.github.io/Weather-App/"
   },
   {
     title: "Character Counter",
     description: "A simple character counter that counts the number of characters in a given text input.",
     image: "../images/characterCounter.png",
-    stack: ["HTML","CSS","JavaScript"],
+    stack: ["HTML", "CSS", "JavaScript"],
     link: "https://anmolpanchal-dev.github.io/CharacterCounter/"
   },
   {
     title: "Personal Task Tracker",
     description: "A simple task tracker to manage your daily tasks effectively.",
     image: "../images/taskTracker.png",
-    stack: ["HTML","CSS","JavaScript"],
+    stack: ["HTML", "CSS", "JavaScript"],
     link: "https://anmolpanchal-dev.github.io/PersonalTaskTracker/"
   },
-
 ];
 
-const container = document.getElementById("projectContainer");
-const searchInput = document.getElementById("searchInput");
+// ── DOM REFS (IDs unchanged) ──────────────────────────────
+const container    = document.getElementById("projectContainer");
+const searchInput  = document.getElementById("searchInput");
 const projectCount = document.getElementById("projectCount");
 
+// ── renderProjects() — unchanged logic ───────────────────
 function renderProjects(data) {
   container.innerHTML = "";
   projectCount.innerText = `${data.length} Projects`;
@@ -80,7 +90,8 @@ function renderProjects(data) {
     container.innerHTML += `
       <div class="col-md-6 col-lg-4">
         <div class="card project-card h-100">
-          <img src="${project.image}" class="card-img-top" alt="${project.title}">
+          <img src="${project.image}" class="card-img-top" alt="${project.title}"
+               onerror="this.style.background='#f0ede8';this.style.minHeight='200px'">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title fw-semibold">${project.title}</h5>
             <p class="card-text text-muted small">${project.description}</p>
@@ -98,16 +109,24 @@ function renderProjects(data) {
           </div>
         </div>
       </div>
-    `
+    `;
   });
 }
 
+// ── filterStack() — unchanged logic ──────────────────────
 function filterStack(tech) {
+  // Design helper: sync active state on all pill buttons
+  document.querySelectorAll('.ps-pill').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === tech ||
+      (tech === 'All' && btn.textContent.trim() === 'All'));
+  });
+
   tech === "All"
     ? renderProjects(projects)
     : renderProjects(projects.filter(p => p.stack.includes(tech)));
 }
 
+// ── Search listener — unchanged logic ────────────────────
 searchInput.addEventListener("input", () => {
   const value = searchInput.value.toLowerCase();
   renderProjects(projects.filter(p =>
@@ -115,8 +134,16 @@ searchInput.addEventListener("input", () => {
   ));
 });
 
+// ── Initial render — unchanged ────────────────────────────
 renderProjects(projects);
 
-document.getElementById("previouspage").addEventListener("click", function() {
-    window.location.href = "../index.html";
+// ── Back button — ID #previouspage, logic unchanged ──────
+document.getElementById("previouspage").addEventListener("click", function () {
+  window.location.href = "../index.html";
+});
+
+// ── Design helper: navbar shadow on scroll ────────────────
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.ps-navbar');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
 });
