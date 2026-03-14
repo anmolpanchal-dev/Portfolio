@@ -4,17 +4,17 @@
    All existing IDs & class hooks preserved — design only
    ============================================================ */
 
-/* ── DESIGN TOKENS ────────────────────────────────────────── */
+
 :root {
   --ps-white:      #ffffff;
-  --ps-bg:         #f5f3ef;          /* warm off-white */
+  --ps-bg:         #f5f3ef;          
   --ps-bg2:        #ede9e2;
-  --ps-ink:        #1a1612;          /* near-black warm */
+  --ps-ink:        #1a1612;          
   --ps-ink2:       #4a453e;
   --ps-muted:      #9a948c;
-  --ps-accent:     #d4541a;          /* burnt-orange accent */
+  --ps-accent:     #d4541a;          
   --ps-accent-lt:  #fdf0e8;
-  --ps-accent2:    #1a3d6e;          /* deep navy secondary */
+  --ps-accent2:    #1a3d6e;          
   --ps-border:     rgba(26,22,18,0.08);
   --ps-shadow-sm:  0 2px 12px rgba(26,22,18,0.06);
   --ps-shadow-md:  0 8px 30px rgba(26,22,18,0.10);
@@ -23,12 +23,12 @@
   --ps-radius-sm:  10px;
   --ps-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* fonts */
+  
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Plus Jakarta Sans', sans-serif;
 }
 
-/* ── RESET & BASE ─────────────────────────────────────────── */
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -41,7 +41,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle grain texture overlay */
+
 body::after {
   content: '';
   position: fixed;
@@ -53,8 +53,8 @@ body::after {
 }
 
 
-/* ── NAVBAR ───────────────────────────────────────────────── */
-/* Design improvement: clean white sticky bar with warm shadow */
+
+
 .ps-navbar {
   background: rgba(245, 243, 239, 0.92) !important;
   backdrop-filter: blur(16px);
@@ -68,7 +68,7 @@ body::after {
   box-shadow: var(--ps-shadow-sm);
 }
 
-/* Back button — ID #previouspage unchanged */
+
 .ps-back-btn {
   display: inline-flex;
   align-items: center;
@@ -95,7 +95,7 @@ body::after {
   box-shadow: var(--ps-shadow-md);
 }
 
-/* Brand */
+
 .ps-brand {
   display: flex;
   align-items: center;
@@ -121,7 +121,7 @@ body::after {
   50%       { opacity: 0.6; transform: scale(1.4); }
 }
 
-/* Filter pills */
+
 .ps-pill {
   padding: 6px 16px;
   background: transparent;
@@ -149,15 +149,15 @@ body::after {
 }
 
 
-/* ── HERO SECTION ─────────────────────────────────────────── */
-/* Design improvement: editorial hero with serif headline */
+
+
 .ps-hero {
   padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 6vw, 5rem);
   position: relative;
   overflow: hidden;
 }
 
-/* Decorative background blob */
+
 .ps-hero::before {
   content: '';
   position: absolute;
@@ -170,7 +170,7 @@ body::after {
   pointer-events: none;
 }
 
-/* Eyebrow tag */
+
 .ps-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -187,7 +187,7 @@ body::after {
   animation: fadeUp 0.6s ease both;
 }
 
-/* Hero headline — Playfair Display */
+
 .ps-hero-title {
   font-family: var(--font-display);
   font-weight: 800;
@@ -203,7 +203,7 @@ body::after {
   color: var(--ps-accent);
   position: relative;
 }
-/* Underline accent under italic text */
+
 .ps-hero-title em::after {
   content: '';
   position: absolute;
@@ -225,7 +225,7 @@ body::after {
   animation: fadeUp 0.6s 0.2s ease both;
 }
 
-/* Stats row */
+
 .ps-stats {
   animation: fadeUp 0.6s 0.3s ease both;
 }
@@ -254,7 +254,7 @@ body::after {
   align-self: stretch;
 }
 
-/* Decorative right element */
+
 .ps-hero-deco {
   position: relative;
   width: 260px;
@@ -311,8 +311,8 @@ body::after {
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 
 
-/* ── CONTROLS BAR (search + select) ──────────────────────── */
-/* Design improvement: floating pill bar */
+
+
 .ps-controls-bar {
   padding: 0 0 2.5rem;
   animation: fadeUp 0.6s 0.35s ease both;
@@ -330,7 +330,7 @@ body::after {
   font-size: 0.9rem;
   pointer-events: none;
 }
-/* ID #searchInput — unchanged */
+
 .ps-search-input {
   width: 100%;
   padding: 12px 16px 12px 42px;
@@ -351,7 +351,7 @@ body::after {
   box-shadow: 0 0 0 4px rgba(212,84,26,0.08);
 }
 
-/* Select wrapper */
+
 .ps-select-wrap {
   position: relative;
 }
@@ -386,14 +386,14 @@ body::after {
 }
 
 
-/* ── GRID SECTION ─────────────────────────────────────────── */
+
 .ps-grid-section {
   animation: fadeUp 0.6s 0.4s ease both;
 }
 
-/* ── PROJECT CARDS ────────────────────────────────────────── */
-/* Design improvement: warm white card, layered shadow, hover lift */
-/* Classes .project-card and .card-img-top preserved from JS render */
+
+
+
 .project-card {
   background: var(--ps-white);
   border: 1px solid var(--ps-border) !important;
@@ -421,7 +421,7 @@ body::after {
 }
 .project-card:hover::before { opacity: 1; }
 
-/* Card image — class .card-img-top preserved */
+
 .card-img-top {
   height: 200px !important;
   object-fit: cover !important;
@@ -431,7 +431,7 @@ body::after {
   transform: scale(1.04);
 }
 
-/* Image overlay gradient */
+
 .project-card .card-img-wrapper {
   position: relative;
   overflow: hidden;
@@ -447,14 +447,14 @@ body::after {
   pointer-events: none;
 }
 
-/* Card body */
+
 .card-body {
   position: relative;
   z-index: 1;
   padding: 1.25rem 1.3rem 1.4rem !important;
 }
 
-/* Card title — .card-title preserved */
+
 .card-title {
   font-family: var(--font-display) !important;
   font-weight: 700 !important;
@@ -465,7 +465,7 @@ body::after {
   line-height: 1.3;
 }
 
-/* Card text — .card-text preserved */
+
 .card-text {
   font-size: 0.82rem !important;
   color: var(--ps-muted) !important;
@@ -473,7 +473,7 @@ body::after {
   font-weight: 400;
 }
 
-/* Tech badge — .tech-badge & .badge preserved from JS */
+
 .tech-badge {
   background: var(--ps-accent-lt) !important;
   color: var(--ps-accent) !important;
@@ -490,7 +490,7 @@ body::after {
   background: rgba(212,84,26,0.12) !important;
 }
 
-/* View Project button — .btn-outline-primary preserved from JS */
+
 .btn-outline-primary {
   --bs-btn-color: var(--ps-accent) !important;
   --bs-btn-border-color: var(--ps-accent) !important;
@@ -509,7 +509,7 @@ body::after {
   box-shadow: 0 4px 14px rgba(212,84,26,0.3) !important;
 }
 
-/* Project counter — ID #projectCount preserved */
+
 .counter,
 #projectCount {
   font-size: 0.82rem !important;
@@ -518,7 +518,7 @@ body::after {
   letter-spacing: 0.03em;
 }
 
-/* Empty state */
+
 .text-center.mt-5.text-muted {
   padding: 5rem 2rem;
   font-size: 1.1rem;
@@ -526,13 +526,13 @@ body::after {
 }
 
 
-/* ── ANIMATIONS ───────────────────────────────────────────── */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Staggered card entrance — applied to Bootstrap col wrappers */
+
 .row#projectContainer > div { animation: fadeUp 0.5s ease both; }
 .row#projectContainer > div:nth-child(1) { animation-delay: 0.05s; }
 .row#projectContainer > div:nth-child(2) { animation-delay: 0.10s; }
@@ -545,14 +545,14 @@ body::after {
 .row#projectContainer > div:nth-child(9) { animation-delay: 0.45s; }
 
 
-/* ── SCROLLBAR ────────────────────────────────────────────── */
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--ps-bg); }
 ::-webkit-scrollbar-thumb { background: var(--ps-bg2); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--ps-muted); }
 
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
+
 @media (max-width: 767px) {
   .ps-hero { padding: 3rem 0 2rem; }
   .ps-hero-title { font-size: 2.2rem; }

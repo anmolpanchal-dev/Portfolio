@@ -5,7 +5,7 @@
    All original IDs/classes preserved — visual improvements only
    ================================================================ */
 
-/* ── DESIGN TOKENS ──────────────────────────────────────────── */
+
 :root {
   --bg:          #f8f6f1;
   --bg-tint:     #f0ece3;
@@ -14,7 +14,7 @@
   --ink2:        #4a433b;
   --muted:       #9b9188;
   --border:      rgba(28,24,20,0.09);
-  --accent:      #c84b0a;        /* terracotta */
+  --accent:      #c84b0a;        
   --accent-lt:   #fdf0e8;
   --accent-glow: rgba(200,75,10,0.18);
   --green:       #15803d;
@@ -32,7 +32,7 @@
   --font-body:   'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-/* ── BASE ───────────────────────────────────────────────────── */
+
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -45,7 +45,7 @@ body {
 img { display: block; max-width: 100%; }
 a  { color: inherit; text-decoration: none; }
 
-/* Warm grain texture */
+
 body::after {
   content: '';
   position: fixed; inset: 0;
@@ -85,7 +85,7 @@ body::after {
 }
 #nav.nav-shadow { box-shadow: var(--shadow-sm); }
 
-/* Brand */
+
 #nav .navbar-brand {
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@ body::after {
   50%      { transform: scale(1.6); opacity: 0.5; }
 }
 
-/* Nav links */
+
 #nav .nav-link {
   color: var(--ink2) !important;
   font-weight: 600;
@@ -118,7 +118,7 @@ body::after {
 }
 #nav .nav-link:hover { background: var(--bg-tint); color: var(--ink) !important; }
 
-/* Resume button in nav */
+
 .btn-resume {
   display: inline-flex;
   align-items: center;
@@ -134,7 +134,7 @@ body::after {
 }
 .btn-resume:hover { background: var(--accent); transform: translateY(-1px); }
 
-/* Hamburger */
+
 #nav .navbar-toggler {
   border: 1px solid var(--border);
   border-radius: var(--radius-xs);
@@ -156,7 +156,7 @@ body::after {
   overflow: hidden;
 }
 
-/* Background blob decorations */
+
 .hero-blob {
   position: absolute;
   border-radius: 50%;
@@ -183,7 +183,7 @@ body::after {
 
 .hero-section .container { position: relative; z-index: 1; }
 
-/* Hero badge */
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -207,7 +207,7 @@ body::after {
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-/* Hero headline */
+
 .hero-title {
   font-family: var(--font-display);
   font-weight: 700;
@@ -217,7 +217,7 @@ body::after {
   color: var(--ink);
   margin-bottom: 1.2rem;
 }
-/* id="diffColorText" preserved */
+
 #diffColorText,
 .hero-title em {
   font-style: italic;
@@ -234,7 +234,7 @@ body::after {
 }
 .hero-sub strong { color: var(--ink); font-weight: 700; }
 
-/* CTA buttons */
+
 .btn-primary-custom {
   display: inline-flex;
   align-items: center;
@@ -278,7 +278,7 @@ body::after {
   transform: translateY(-2px);
 }
 
-/* Social pills */
+
 .social-pill {
   display: inline-flex;
   align-items: center;
@@ -301,7 +301,7 @@ body::after {
 }
 .social-pill i { font-size: 1rem; }
 
-/* Profile card */
+
 .profile-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -331,7 +331,7 @@ body::after {
 }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 
-/* id="pic" preserved */
+
 #pic img {
   width: 80px; height: 80px;
   border-radius: 50%;
@@ -340,7 +340,7 @@ body::after {
   position: relative; z-index: 1;
 }
 
-/* id="profileText" preserved */
+
 #profileText h3 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -370,7 +370,7 @@ body::after {
 }
 .profile-handle { font-size: 11px; color: var(--muted); }
 
-/* id="leftSection2" preserved */
+
 #leftSection2.profile-meta { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
 #leftSection2 p {
   display: flex;
@@ -534,7 +534,7 @@ body::after {
 .info-card h6 { font-size: 11.5px; font-weight: 700; margin-top: 10px; }
 #card1 { color: var(--accent); }
 
-/* id="logo" and id="devToolLogo" */
+
 .tech-logos { display: flex; align-items: center; gap: 7px; }
 .tech-logos img { height: 20px; object-fit: contain; }
 
@@ -567,7 +567,7 @@ body::after {
 }
 .project-card:hover::before { opacity: 1; }
 
-/* Card header for skills/edu cards */
+
 .pcard-header {
   display: flex;
   align-items: center;
@@ -592,7 +592,7 @@ body::after {
   margin: 0;
 }
 
-/* Skills list */
+
 .skills-list {
   list-style: none;
   padding: 16px 20px 20px;
@@ -623,7 +623,7 @@ body::after {
 }
 .skills-list li i { font-size: 0.95rem; color: var(--accent); }
 
-/* Education items */
+
 .education-item {
   padding: 14px 20px;
   border-bottom: 1px solid var(--border);
@@ -652,7 +652,7 @@ body::after {
 }
 .education-item p { font-size: 12px; color: var(--muted); margin: 0; }
 
-/* Project card image */
+
 .image-container {
   position: relative;
   overflow: hidden;
@@ -666,7 +666,7 @@ body::after {
 }
 .project-card:hover .image-container img { transform: scale(1.05); }
 
-/* Image hover overlay */
+
 .img-overlay {
   position: absolute;
   inset: 0;
@@ -684,10 +684,10 @@ body::after {
 .project-card:hover .img-overlay { opacity: 1; }
 .project-card:hover .img-overlay i { transform: translateY(0); }
 
-/* Project card body */
+
 .pcard-body { padding: 16px 18px 18px; position: relative; z-index: 1; }
 
-/* class="project-title" preserved */
+
 .project-title {
   font-family: var(--font-display);
   font-weight: 700;
@@ -697,7 +697,7 @@ body::after {
   margin: 0 0 10px;
 }
 
-/* class="tech-stack" + class="tech" preserved */
+
 .tech-stack { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
 .tech {
   padding: 4px 11px;
@@ -716,7 +716,7 @@ body::after {
   border-color: rgba(200,75,10,0.18);
 }
 
-/* class="project-btn" preserved */
+
 .project-btn {
   display: inline-flex;
   align-items: center;
@@ -769,7 +769,7 @@ body::after {
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
-/* id="portfolioTag" preserved */
+
 .tool-chip--active, #portfolioTag {
   background: var(--ink) !important;
   border-color: var(--ink) !important;
@@ -851,7 +851,7 @@ body::after {
 
 .footer-contact-wrap { margin-bottom: 20px; }
 
-/* id="contactForm" preserved */
+
 #contactForm {
   display: inline-flex;
   align-items: center;
@@ -922,7 +922,7 @@ body::after {
   padding: 20px;
 }
 
-/* class="popup-box" preserved */
+
 #aboutPopup .popup-box,
 .resume-box {
   background: var(--surface);
@@ -975,7 +975,7 @@ body::after {
   letter-spacing: 0.04em;
 }
 
-/* class="close-btn" preserved */
+
 .close-btn {
   position: absolute; top: 14px; right: 16px;
   width: 32px; height: 32px;
@@ -991,10 +991,10 @@ body::after {
 }
 .close-btn:hover { color: var(--accent); transform: rotate(90deg); background: var(--accent-lt); }
 
-/* Resume box */
+
 .resume-box { padding: 66px 28px 28px; }
 
-/* class="download-btn" preserved */
+
 .download-btn {
   position: absolute; top: 14px; left: 18px;
   display: inline-flex; align-items: center; gap: 5px;
@@ -1013,7 +1013,7 @@ body::after {
   color: var(--surface);
 }
 
-/* class="resume-content" preserved */
+
 .resume-content h1 {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -1043,7 +1043,7 @@ body::after {
 .resume-content p i { color: var(--accent); margin-top: 2px; flex-shrink: 0; }
 .resume-content ul { margin: 6px 0 6px 18px; }
 .resume-content ul li { font-size: 0.83rem; color: var(--ink2); margin: 4px 0; line-height: 1.55; }
-/* class="highlight" preserved */
+
 .highlight { color: var(--accent) !important; font-weight: 700 !important; display: inline !important; }
 
 @keyframes pop-in {
