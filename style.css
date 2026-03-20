@@ -183,7 +183,6 @@ body::after {
 
 .hero-section .container { position: relative; z-index: 1; }
 
-/* Hero badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
