@@ -129,7 +129,6 @@ const portfolioTag = document.getElementById('portfolioTag');
 // No action needed — purely visual, already styled active
 
 
-// ── NAVBAR SHADOW ON SCROLL ───────────────────────────────────
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('nav');
   if (nav) nav.classList.toggle('nav-shadow', window.scrollY > 20);
