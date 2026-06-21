@@ -7,6 +7,13 @@
 // ── PROJECT DATA (unchanged) ──────────────────────────────
 const projects = [
   {
+    title: "Library Management System",
+    description: "Full Stack LMS ",
+    image: "../images/image.png",
+    stack: ["MongoDB","Node JS","React","JavaScript", "HTML", "CSS"],
+    link: "https://anmolpanchal-dev.github.io/ExpenseTracker/"
+  },
+  {
     title: "Expense Tracker",
     description: "A Simple Expense Tracker App",
     image: "../images/Screenshot 2026-01-29 001605.jpg",
